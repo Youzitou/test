@@ -44,9 +44,11 @@ Linux中所有的存储设备都有自己的设备文件名，这些设备文件
 
 [root@localhost ~]#  命令   [选项]  [参数]
 
-touch  
+mkdir  创建目录
 
-cat 
+touch   创建文件 
+
+cat   查看文件内容（不能编辑）
 
 stat
 
@@ -56,15 +58,19 @@ less
 
 head 
 
-tail
+tail -f  文件名 实时更新该文件的所有内容  可以用来查看日志
 
-rm -rf
+rm -rf   递归删除目录中所有内容或文件
 
-
+vim /root/.bashrc  添加alias la = 'ls -al'    然后 source /root/.bashrc      给命令ls -al起别名
 
 ln(link，链接)
 
- 修改权限命令 chmod
+修改权限命令 chmod
+
+x=1 w=2 r =4
+
+chmod  u=rwx,g=rx,o=x  文件或目录    相当于chmod  751 文件或目录
 
 给所有者 添加执行权限 chmod u+x bcd   (给bcd文件添加执行权限)
 
@@ -78,11 +84,13 @@ tar   -cvf     打包
 
 tar  -xvf   解打包
 
-ps aux  查看系统中当前运行的进程
+ps aux  ps -ef 查看系统中当前运行的进程
 
 ps -le  查看系统中当前运行的进程
 
 top 动态查看，每3秒显示一次
+
+tree  以树状形式显示当前目录下的所有内容
 
 pstree  以树状形式显示进程
 
@@ -92,7 +100,7 @@ killall [选项] [信号] 进程名  杀一批进程
 
 killall -9 httpd  干掉Apache
 
-
+shutdown -r now  马上重启  需要root权限
 
 **Linux  Shell   脚本**
 
