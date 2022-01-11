@@ -44,11 +44,11 @@ Linux中所有的存储设备都有自己的设备文件名，这些设备文件
 
 [root@localhost ~]#  命令   [选项]  [参数]
 
-mkdir  创建目录
+创建目录   mkdir  
 
-touch   创建文件 
+创建文件  touch    
 
-cat   查看文件内容（不能编辑）
+查看文件内容（不能编辑） cat   
 
 stat
 
@@ -80,17 +80,15 @@ chown  修改文件所有者
 
 chgrp  修改文件所属组
 
-tar   -cvf     打包
+打包      tar   -cvf     
 
-tar  -xvf   解打包
+解打包   tar  -xvf  
 
-ps aux  ps -ef 查看系统中当前运行的进程
+查看系统中当前运行的进程   ps aux        或ps -ef   或 ps -le  
 
-ps -le  查看系统中当前运行的进程
+动态查看进程，每3秒显示一次     top 
 
-top 动态查看，每3秒显示一次
-
-tree  以树状形式显示当前目录下的所有内容
+以树状形式显示当前目录下的所有内容    tree  
 
 pstree  以树状形式显示进程
 
@@ -102,7 +100,21 @@ killall -9 httpd  干掉Apache
 
 shutdown -r now  马上重启  需要root权限
 
-**Linux  Shell   脚本**
+**vim**
+
+1命令模式操作
+
+1)搜索指定关键字（相当于windows  ctrl +f）   输入     /关键字  按n向下查找
+
+2)行首 ^     行位 $
+
+3)光标移动到文件头文件头 gg         移动到文件尾 G(shift+g)
+
+4)移动到指定行       :n  移动到第n行
+
+5)如果想让vim永久显示行号，则需要修改vim配置文件vimrc。如果没有此文件可以创建一个   vim ~/.vimsrc
+
+在打开的vimrc文件中最后一行输入：set number
 
 
 
